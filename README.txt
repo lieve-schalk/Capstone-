@@ -1,6 +1,6 @@
 Lieve Schalk Airport CO₂ Emission Analysis and Summary README
 
-Data used in the project can be found in the report 
+Data used in the project can be found in the report /notebooks, Project Report.docx
 
 CO₂ emission has become a major global concern, and the aviation industry is a significant contributor to this environmental challenge. Aviation accounts for 2.5% of global CO₂ emissions, but it has contributed around 4% to global warming to date (What share of global CO₂ emissions come from aviation? - Our World in Data). 
 
@@ -11,4 +11,5 @@ This project analyzes the emission from flights worldwide to see which countries
 After this data was collected, the next step was to clean and restructure the raw data, and do an exploratory data analysis (EDA) to understand the dataset better and find global and US-specific patterns. This was performed in Python and then uploaded to BigQuery. In BigQuery transformations and aggregations were then done using SQL and some additional metrics were created, such as emissions per flight, intensity ratios, and comparisons between U.S. cities. Finally, as a final result those insights were visualized in Tableau on an interactive dashboard. 
 
 Key findings show that the United States stands out as the world’s largest contributor to aviation-related CO₂ emissions, driven by the high volume of flights operating across its major airports. These airports collectively account for a disproportionately large share of global aviation emissions. Interestingly, when comparing US airports by the average CO₂ emitted per flight, the variation is surprisingly small—most airports fall within a similar range of approximately 1.18 to 1.31 million kilograms per flight. This suggests that while total emissions differ from airport to airport due to traffic volume, the carbon footprint per individual flight remains relatively consistent across the network. Overall, the findings highlight that emission disparities are primarily driven by airport size and flight frequency rather than differences in per-flight efficiency. Based on these insights, the project recommends that the FAA should prioritize high-emission and high-intensity airports for sustainability initiatives. This could include the adoption of Sustainable Aviation Fuel (SAF), meanwhile it is also important to teach passengers about their CO₂ usages. 
+
 
