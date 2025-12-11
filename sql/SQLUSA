@@ -1,0 +1,60 @@
+# analyzes for USA   note that there is only arriving data for USA (so dest_country)
+
+-- select *
+-- from `capstone_project_dataset.flights_full`
+-- where dest_country = 'United States'
+-- limit 5
+
+#1
+-- SELECT
+--   City_dest,
+--   COUNT(*) AS num_flights,
+--   SUM(co2_emissions) AS total_co2,
+--   AVG(co2_emissions) AS avg_co2_per_flight,
+--   SUM(co2_emissions) / COUNT(*) AS co2_intensity_per_flight
+-- FROM
+--   `capstone_project_dataset.flights_full`
+-- WHERE
+--   dest_country = 'United States'
+-- GROUP BY
+--   City_dest
+-- ORDER BY
+--   co2_intensity_per_flight DESC;
+
+
+#2
+-- SELECT
+--     City_dest,
+--   SUM(co2_emissions) AS total_co2,
+--   COUNT(*) AS num_flights,
+--   AVG(co2_emissions) AS avg_co2_per_flight,
+
+--   -- 1. Ratio: avg CO2 per flight divided by number of flights
+--   AVG(co2_emissions) / COUNT(*) AS ratio_avg_to_count,
+
+--   -- 2. Percentage: each city’s share of total U.S. CO2
+--   SUM(co2_emissions) / SUM(SUM(co2_emissions)) OVER () AS pct_of_us_total
+
+-- FROM `capstone_project_dataset.flights_full`
+-- WHERE dest_country = 'United States'
+-- GROUP BY City_dest
+-- ORDER BY total_co2 DESC;
+
+#5
+-- SELECT 
+--   airline_name,
+--   SUM(co2_emissions) AS total_co2,
+--   COUNT(*) AS flights,
+--   SUM(co2_emissions) / COUNT(*) AS avg_co2_per_flight
+-- FROM `capstone_project_dataset.flights_full`
+-- WHERE dest_country = 'United States'
+-- GROUP BY airline_name
+-- ORDER BY total_co2 DESC;
+
+-- select *
+-- FROM `capstone_project_dataset.flights_full`
+-- limit 5
+
+
+
+

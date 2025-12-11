@@ -1,0 +1,69 @@
+## worldwide data / grouping
+
+-- select *
+-- from `capstone_project_dataset.flights_full`
+-- limit 10
+
+#1
+SELECT
+  airline_name,
+  COUNT(*) AS flight_count,
+  SUM(co2_emissions) AS total_co2,
+  AVG(co2_emissions) AS avg_co2_per_flight
+FROM `capstone_project_dataset.flights_full`
+GROUP BY airline_name
+ORDER BY total_co2 DESC;
+
+
+#2
+-- SELECT
+--   dest_country AS country,
+--   SUM(co2_emissions) AS total_co2
+-- FROM `capstone_project_dataset.flights_full`
+-- GROUP BY country
+-- ORDER BY total_co2 DESC;
+
+#3
+-- SELECT
+--   from_airport_code AS origin,
+--   IATA AS destination,
+--   COUNT(*) AS num_flights,
+--   SUM(co2_emissions) AS total_route_co2,
+--   AVG(co2_emissions) AS avg_co2_per_flight,
+--   AVG(price) AS avg_price
+-- FROM
+--   `capstone_project_dataset.flights_full`
+-- GROUP BY
+--   origin, destination
+-- ORDER BY
+--   total_route_co2 DESC;
+
+-- Average CO2 emissions per flight for each country
+
+
+#4
+-- SELECT
+--   dest_country AS des_country,
+--   COUNT(*) AS flight_count,
+--   AVG(co2_emissions) AS avg_co2_per_flight,
+--   MIN(co2_emissions) AS min_co2,
+--   MAX(co2_emissions) AS max_co2
+-- FROM `capstone_project_dataset.flights_full`
+-- GROUP BY dest_country
+-- ORDER BY des_country ASC;
+
+#combine those 2 in google sheets to add them please for the total.
+
+-- SELECT
+--   from_country AS org_country,
+--   COUNT(*) AS flight_count,
+--   AVG(co2_emissions) AS avg_co2_per_flight,
+--   MIN(co2_emissions) AS min_co2,
+--   MAX(co2_emissions) AS max_co2
+-- FROM `capstone_project_dataset.flights_full`
+-- GROUP BY from_country
+-- ORDER BY from_country ASC;
+
+
+
+
